@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#sale img {
+    width: 95%;
+}
+
+#header {
+    height: 46.5px;
+    background-color: black;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav li a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 0 24px;
+    line-height: 46.5px;
+    text-align: center;
+
+}
+
+#intro {
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+#intro h1 {
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#intro h2 {
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#intro p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: x-large;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#intro img {
+    width: 100%;
+}
+
+#intro #quote img {
+    height: 10%;
+    width: 10%;
+    padding-left: 300px;
+}
+
+#intro #quote h2 {
+    padding-left: 700px;
+}
+
+#product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+#product img {
+    height: 300px;
+    width: 300px;
+    padding: 20 20 20 20;
+    border-radius: 10px;
+}
+
+#product h3 {
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#product h4 {
+    text-align: center;
+    color: gray;
+    font-size: smaller;
+}
+
+#map {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#map iframe {
+    width: 95%;
+}
+
+#address {
+    display: flex;
+    flex-direction: row;
+}
+
+#question h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center
+}
+
+#contact .contact-text {
+    text-align: center;
+    margin: 15px 0;
+    text-transform: uppercase;
+    padding-left: 250px;
+    padding-right: 30px;
+}
+
+#contact .contact-info {
+    text-align: center;
+}
+
+#contact .contact-input input {
+    width: 100%;
+    height: 46.5px;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding-right: 90px;
+}
+
+.contact-button {
+    display: flex;
+    padding-left: 1100px;
+}
+
+button {
+    margin: 15px 0;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: #000;
+}

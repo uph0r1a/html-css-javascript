@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    height: 97.3vh;
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border-right: solid;
+    border-color: gray;
+}
+
+nav header {
+    height: 100%;
+    margin: auto;
+    font-size: 35px
+}
+
+nav a {
+    color: #696969;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    border-style: solid none none none;
+    border-width: 1px;
+    border-color: black;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+main {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+main header {
+    font-size: 30px;
+}
+
+main p {
+    color: #696969;
+    padding-left: 20px;
+    line-height: 24px;
+}
+
+main pre {
+    background-color: #F0F0F0;
+    padding: 20px;
+    margin-left: 40px;
+    border-radius: 5px;
+    color: #696969;
+    line-height: 24px;
+}
+
+main ul {
+    color: #696969;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    nav header {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+        border-width: 1px;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    main header {
+        font-size: 25px;
+    }
+
+    main p {
+        padding-left: 0;
+        font-size: 14px;
+    }
+
+    main pre {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    main ul {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav {
+        width: 250px;
+    }
+
+    nav header {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    main {
+        margin-left: 250px;
+        padding: 15px;
+    }
+
+    main header {
+        font-size: 28px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    main pre {
+        padding: 18px;
+        margin-left: 30px;
+    }
+
+    main ul {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    nav {
+        width: 300px;
+    }
+
+    nav header {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 17px;
+        padding: 15px;
+        text-align: left;
+    }
+
+    main {
+        margin-left: 300px;
+        padding: 20px;
+    }
+
+    main header {
+        font-size: 30px;
+    }
+
+    main p {
+        font-size: 18px;
+    }
+
+    main pre {
+        padding: 20px;
+        margin-left: 40px;
+    }
+
+    main ul {
+        font-size: 18px;
+    }
+}

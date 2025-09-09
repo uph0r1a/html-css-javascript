@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav li a {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 24px;
+}
+
+#nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 15px 0;
+}
+
+.member-text {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.the-band-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.the-band-img img {
+    width: 20%;
+    border-radius: 10px;
+}
+
+.contact-text {
+    text-align: center;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-input input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 15px 0;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: #ccc;
+    color: #000;
+}

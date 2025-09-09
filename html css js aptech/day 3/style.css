@@ -1,0 +1,15 @@
+div {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px;
+    background-color: lightblue;
+    display: none;
+}
+span {
+    display: none;
+}
+
+img {
+    display: none;
+}
