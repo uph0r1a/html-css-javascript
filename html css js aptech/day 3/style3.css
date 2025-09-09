@@ -1,0 +1,36 @@
+#img{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+#red {
+    width: 70px;
+    height: 70px;
+}
+
+#green {
+    width: 70px;
+    height: 70px;
+}
+
+#blue {
+    width: 70px;
+    height: 70px;
+}
+
+#yellow {
+    width: 70px;
+    height: 70px;
+}
+
+#purple {
+    width: 70px;
+    height: 70px;
+}
+
+#black {
+    width: 70px;
+    height: 70px;
+}
