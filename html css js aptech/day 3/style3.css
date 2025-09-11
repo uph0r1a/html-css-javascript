@@ -3,17 +3,14 @@ body{
     height: 100%;
 }
 #img{
-    display: flex;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
-div {
-    padding-left: 100px;
-}
 
 img {
     width: 400px;
     height: 300px;
-    padding-bottom: 30px;
+    padding: 40px;
 }

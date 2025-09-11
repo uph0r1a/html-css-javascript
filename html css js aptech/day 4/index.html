@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div> -->
+    <form class="register-form" action="#" method="post">
+        <h1>Thông tin đăng ký</h1>
+
+        <!-- Họ tên -->
+        <label for="name">Họ tên</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ tên" required>
+
+        <!-- Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Nhập email" required>
+
+        <!-- Mật khẩu -->
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" placeholder="Nhập password" required>
+
+        <!-- Số điện thoại -->
+        <label for="phone">Số điện thoại</label>
+        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+
+        <!-- Ngày sinh -->
+        <label for="dob">Ngày sinh</label>
+        <input type="date" id="dob" name="dob">
+
+        <!-- Giới tính -->
+        <label>Giới tính:
+            <input type="radio" id="male" name="gender" value="male"> <label for="male">Nam</label>
+            <input type="radio" id="female" name="gender" value="female"> <label for="female">Nữ</label>
+        </label>
+        <!-- Sở thích -->
+        <label>Sở thích:
+            <input type="checkbox" name="hobby" value="reading"> Đọc sách
+            <input type="checkbox" name="hobby" value="travel"> Du lịch
+            <input type="checkbox" name="hobby" value="music"> Âm nhạc
+        </label>
+        <!-- Quốc gia -->
+        <label for="country">Quốc gia</label>
+        <select id="country" name="country">
+            <option value="">--Chọn quốc gia--</option>
+            <option value="vn">Việt Nam</option>
+            <option value="us">Mỹ</option>
+            <option value="jp">Nhật Bản</option>
+        </select>
+
+        <!-- Trình độ -->
+        <label for="education">Trình độ học vấn</label>
+        <input list="education-list" id="education" name="education">
+        <datalist id="education-list">
+            <option value="Cao đẳng">
+            <option value="Đại học">
+            <option value="Thạc sĩ">
+            <option value="Tiến sĩ">
+        </datalist>
+
+        <!-- Upload file -->
+        <label for="avatar">Ảnh đại diện</label>
+        <input type="file" id="avatar" name="avatar">
+
+        <!-- Màu yêu thích -->
+        <label for="color">Màu yêu thích</label>
+        <input type="color" id="color" name="color">
+
+        <!-- Độ hài lòng -->
+        <label for="satisfaction">Độ hài lòng</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+
+        <!-- Website -->
+        <label for="website">Website cá nhân</label>
+        <input type="url" id="website" name="website" placeholder="https://">
+
+        <!-- Số lượng -->
+        <label for="quantity">Số lượng đăng ký</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+
+        <!-- Lời nhắn -->
+        <label for="message">Lời nhắn</label>
+        <textarea id="message" name="message" rows="3"></textarea>
+
+        <!-- Input ẩn -->
+        <input type="hidden" name="token" value="123456">
+
+        <!-- Nút submit/reset -->
+        <button type="submit">Đăng ký</button>
+        <input type="reset" id="reset" value="Nhập lại">
+    </form>
+
+
+</body>
+
+</html>

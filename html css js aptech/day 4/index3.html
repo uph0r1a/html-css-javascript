@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style3.css">
+</head>
+
+<body>
+    <form class="register-form" action="#" method="post">
+        <h1>Event register form</h1>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter email" required>
+
+        <label>Gender:
+            <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label>
+        </label>
+
+        <label>Hobby:
+            <input type="checkbox" name="hobby" value="reading"> Reading
+            <input type="checkbox" name="hobby" value="travel"> Travel
+            <input type="checkbox" name="hobby" value="music"> Music
+            <input type="checkbox" name="hobby" value="else" > Else:
+            <input type="text" name="else" id="else">
+        </label>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="">--Pick country--</option>
+            <option value="us">US</option>
+            <option value="jp">Japan</option>
+            <option value="uk">UK</option>
+        </select>
+
+        <button type="submit">Submit</button>
+        <input type="reset" value="Reset" id="reset">
+    </form>
+</body>
+
+</html>
