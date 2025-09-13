@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    color: rgb(97, 72, 2);
+    font-size: larger;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #d0ebff;
+}
+
+@media (max-width:768px) {
+    table, thead, tbody, th, td, tr {
+        background-color: black;
+        color: white;
+    }
+
+    th {
+        color: gold;
+        font-size: larger;
+    }
+
+    tr:nth-child(even) {
+        background: gray;
+    }
+    th,td {
+        border: 1px solid white;
+    }
+}

@@ -1,0 +1,35 @@
+ .register-form {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 15px;
+     max-width: 400px;
+     margin: 20px auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+ }
+
+ .register-form input, .register-form button {
+     padding: 10px;
+     border: 1px solid #aaa;
+     border-radius: 5px;
+ }
+
+ .register-form button {
+     background: #007bff;
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+
+ #reset {
+     cursor: pointer;
+ }
+
+ .register-form button:hover {
+     background: #0056b3;
+ }
+
+ #reset:hover {
+     background: rgb(203, 200, 200);
+ }

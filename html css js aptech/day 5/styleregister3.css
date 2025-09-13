@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+th {
+    background: white;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #d0ebff;
+}
+
+@media (max-width:600px) {
+    body {
+        background-color: black;
+
+    }
+
+    table, thead, tbody, th, td, tr {
+        background-color: black;
+        color: white;
+        font-size: small;
+    }
+
+    th {
+        color: gold;
+        font-size: larger;
+    }
+
+    tr:nth-child(even) {
+        background: gray;
+    }
+
+    th, td {
+        border: 1px solid white;
+    }
+}
