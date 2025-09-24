@@ -5,6 +5,7 @@ if (a % 2 == 0) {
 } else {
   console.log("Số lẻ");
 }
+
 //Bài 2
 let diem = 50;
 if (diem >= 90) {
@@ -18,10 +19,12 @@ if (diem >= 90) {
 } else {
   console.log("Nhập lại điểm");
 }
+
 //Bài 3
 for (let i = 0; i <= 10; i++) {
   console.log("6 x ", i, " = ", 6 * i);
 }
+
 //Bài 4
 let i = 1;
 while (i <= 100) {
@@ -35,6 +38,7 @@ let password = 123456;
 do {
   console.log("Nhập đúng mật khẩu 123456");
 } while (password != 123456);
+
 //Bài 6
 let hello = function () {
   console.log("Xin chào học viên!");
@@ -42,6 +46,7 @@ let hello = function () {
 
 hello();
 hello();
+
 //Bài 7
 let nhanDoi = (x) => {
   return x * 2;
@@ -53,11 +58,36 @@ let kiemTraChanLe = (n) => {
     return "Lẻ";
   }
 };
-//Bài 8
+
+// Bài 8
 let isFalse = false;
 let taiTaiLieu = new Promise((resolve, reject) => {
-  resolve("Tải thành công!");
-  if ((isFalse = true)) {
+  if (isFalse == false) {
+    setTimeout(() => {
+      resolve("Tải thành công!");
+    }, 2000);
+  } else {
     reject("Tải thất bại");
   }
 });
+
+//Bài 9
+taiTaiLieu
+  .then((result) => {
+    console.log("✅", result);
+  })
+  .catch((error) => {
+    console.log("❌", error);
+  });
+
+//Bài 10
+async function main() {
+  try {
+    let result = await taiTaiLieu;
+    console.log("✅", result);
+  } catch (error) {
+    console.log("❌", error);
+  }
+}
+
+main();
