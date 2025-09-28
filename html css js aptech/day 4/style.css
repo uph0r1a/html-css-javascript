@@ -10,7 +10,7 @@
     padding: 20px;
     text-align: center;
 } */
- .register-form {
+.register-form {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
