@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <table>
         <thead>
@@ -16,9 +18,60 @@
                 <th>Giới tính</th>
                 <th>Vị trí</th>
                 <th>Ghi chú</th>
-                <th>Hành động (<a href="">Sửa</a> <a href="">Xoá</a>)</th>
+                <th id="menu">Hành động (<a href="">Sửa</a> / <a href="">Xoá</a> / <a href="./indexform.html">Quay lại</a>)</th>
             </tr>
         </thead>
+        <tbody>
+            <tr>
+                <td id="stt"></td>
+                <td id="id"></td>
+                <td id="name"></td>
+                <td id="age"></td>
+                <td id="gender"></td>
+                <td id="position"></td>
+                <td id="note"></td>
+            </tr>
+        </tbody>
     </table>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu {
+            width: 250px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background: white;
+            color: black;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        tr:hover {
+            background: #d0ebff;
+        }
+    </style>
 </body>
+
 </html>
