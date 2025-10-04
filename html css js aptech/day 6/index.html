@@ -1,365 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/5abffc5209.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TDT-Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/5abffc5209.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="header">
-        <div id="header-social-media">
-            <ul>
-                <li>Vào cửa hàng trên ứng dụng TDT-Shop</li>
-                <li>Kết nối</li>
-                <li>
-                    <a href="https://www.facebook.com">
-                        <i class="fa-brands fa-square-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="nav">
-            <ul>
-                <li>
-                    <i class="fa-solid fa-bell"></i>
-                    Thông báo
-                </li>
-                <li>
-                    <i class="fa-regular fa-circle-question"></i>
-                    Trợ giúp
-                </li>
-                <li>
-                    <img src="./unnamed.jpg" alt="icon">
-                    <p>Lê Văn Quang</p>
-                </li>
-            </ul>
-        </div>
-        <div id="search">
-            <div id="logo">
-                <a href="./index.html">
-                    <img src="./images.png" alt="logo">
-                </a>
-            </div>
-            <div id="search-bar">
-                <input type="text" id="search-input" placeholder="Tìm sản phẩm trong Shop này">
+  <header class="header">
+    <div class="top-bar">
+      <div class="left">
+        <a href="#">Vào cửa hàng trên ứng dụng TDT-Shop</a> |
+        <a href="#">Kết nối</a>
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="right">
+        <a href="#"><i class="fa-regular fa-bell"></i> Thông báo</a>
+        <a href="#"><i class="fa-regular fa-circle-question"></i> Trợ giúp</a>
+        <a href="#"><img src="./unnamed.jpg" class="avatar">Thái Đức Trí</a>
+      </div>
+    </div>
 
-                <select id="in-shop" name="in-shop">
-                    <option value="">Trong shop</option>
-                    <option value="a">Trong shop a</option>
-                    <option value="b">Trong shop b</option>
-                </select>
+    <div class="main-bar">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-bag-shopping"></i> SHOPPE</span>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm sản phẩm trong Shop này">
+        <select>
+          <option>Trong Shop</option>
+          <option>Trong Shop a</option>
+          <option>Trong Shop b</option>
+        </select>
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+    </div>
+  </header>
 
-                <button>
-                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-                </button>
-            </div>
-            <div id="shopping-cart">
-                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-            </div>
-        </div>
+  <main>
+    <div class="sidebar">
+      <h3><i class="fa-solid fa-list"></i> Danh mục</h3>
+      <ul>
+        <li class="active">Trang điểm mặt</li>
+        <li>Trang điểm môi</li>
+        <li>Trang điểm mắt</li>
+      </ul>
     </div>
-    <div id="main">
-        <div id="main-nav-list">
-            <h3>
-                <i class="fa-solid fa-list"></i>
-                Danh mục
-            </h3>
-            <ul>
-                <li>Trang điểm mặt</li>
-                <li>Trang điểm môi</li>
-                <li>Trang điểm mắt</li>
-            </ul>
+
+    <section class="products">
+      <div class="filter">
+        <span>Sắp xếp theo</span>
+        <button>Phổ biến</button>
+        <button class="active">Mới nhất</button>
+        <button>Bán chạy</button>
+        <select>
+          <option>Giá</option>
+          <option>Giá: Thấp đến cao</option>
+          <option>Giá: Cao đến thấp</option>
+        </select>
+        <div class="page">
+          <span>1/14</span>
+          <button><i class="fa-solid fa-less-than"></i></button>
+          <button><i class="fa-solid fa-greater-than"></i></button>
         </div>
-        <div id="filter">
-            <span>Sắp xếp theo</span>
-            <button>Phổ biến</button>
-            <button>Mới nhất</button>
-            <button>Bán chạy</button>
-            <select id="price" name="price">
-                <option value="">Giá</option>
-                <option value="l-h">Giá: Thấp đến cao</option>
-                <option value="h-l">Giá: Cao đến thấp</option>
-            </select>
-            <div id="chevron">
-                <span><span>1</span>/14</span>
-                <a href="./index.html">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </a>
-                <a href="./index.html">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
+      </div>
+
+      <div class="product-list">
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201311.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
             </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
         </div>
-        <div id="main-content">
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201311.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.200.000đ</span>
-                <span>1.000.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201347.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
             </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201347.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.300.000đ</span>
-                <span>1.050.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201412.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.100.000đ</span>
-                <span>1.000.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201420.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.100.000đ</span>
-                <span>1.000.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201428.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.500.000đ</span>
-                <span>1.200.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201438.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.300.000đ</span>
-                <span>1.200.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201444.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.100.000đ</span>
-                <span>1.000.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201451.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.200.000đ</span>
-                <span>1.100.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201458.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.300.000đ</span>
-                <span>1.000.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
-            <div class="item">
-                <img src="./Screenshot 2025-09-16 201506.png" alt="item">
-                <h4>Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</h4>
-                <span>1.200.000đ</span>
-                <span>1.000.000đ</span>
-                <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
-                <div class="star">
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                    <i class="fa-solid fa-star" style="color: #a9acb1;"></i>
-                </div>
-                <span>88 đã bán</span>
-                <span>Whoo</span>
-                <span>Nhật Bản</span>
-            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
         </div>
-        <div id="list">
-            <ul>
-                <li><i class="fa-solid fa-chevron-left"></i></li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>...</li>
-                <li>14</li>
-                <li><i class="fa-solid fa-chevron-right"></i></li>
-            </ul>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201412.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
         </div>
-        <div id="red-line"></div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201420.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201428.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201438.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201444.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201451.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201458.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+        <div class="item">
+          <img src="./Screenshot 2025-09-16 201506.png" alt="">
+          <p class="title">Kem lót nâng tông Ohui Makeup Ultimate Brightening Lavender Primer SPF20/PA++</p>
+          <p><span class="old">1.200.000đ</span> <span class="new">1.000.000đ</span></p>
+          <div class="meta">
+            <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+            <div style="font-size: xx-small;">
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+              <i class="fa-solid fa-star" style="color: #797a7c;"></i>
+            </div>
+            <span>88 đã bán</span>
+          </div>
+          <small>Whoo | Nhật Bản</small>
+        </div>
+
+      </div>
+
+      <div class="pagination">
+        <button>&lt;</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>...</button>
+        <button>14</button>
+        <button>&gt;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-row">
+      <div>
+        <h4>Chăm sóc khách hàng</h4>
+        <ul>
+          <li>Trung Tâm Trợ Giúp</li>
+          <li>TickID Mall</li>
+          <li>Hướng Dẫn Mua Hàng</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Về TICKID</h4>
+        <ul>
+          <li>Giới Thiệu Về TickID Việt Nam</li>
+          <li>Tuyển Dụng</li>
+          <li>Điều Khoản TickID</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh mục</h4>
+        <ul>
+          <li>Mỹ phẩm</li>
+          <li>Quần áo</li>
+          <li>Đồ điện tử</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Theo dõi chúng tôi</h4>
+        <ul>
+          <li><i class="fa-brands fa-facebook"></i>Facebook</li>
+          <li><i class="fa-brands fa-instagram"></i>Instagram</li>
+          <li><i class="fa-brands fa-linkedin"></i>Linkedin</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tải Ứng Dụng Trên Cửa Hàng</h4>
+        <img src="./Screenshot 2025-09-18 172015.png" alt="QR code" class="qr">
+        <p><i class="fa-brands fa-app-store"></i>Appstore | <i class="fa-brands fa-google-play"></i>Google Play</p>
+      </div>
     </div>
-    <div id="footer">
-        <div id="footer-gap"></div>
-        <div id="row">
-            <div id="customer-service">
-                <h3>Chăm sóc khách hàng</h3>
-                <ul>
-                    <li>Trung Tâm Trợ Giúp</li>
-                    <li>TickID Mall</li>
-                    <li>Hướng Dẵn Mua Hàng</li>
-                </ul>
-            </div>
-            <div id="about">
-                <h3>Về TICKID</h3>
-                <ul>
-                    <li>Giới Thiệu Về TickID Việt Nam</li>
-                    <li>Tuyển Dụng</li>
-                    <li>Điều Khoản TickID</li>
-                </ul>
-            </div>
-            <div id="list-footer">
-                <h3>Danh mục</h3>
-                <ul>
-                    <li>Mỹ Phẩm</li>
-                    <li>Quần Áo</li>
-                    <li>Đồ Điện Tử</li>
-                </ul>
-            </div>
-            <div id="follow-us">
-                <h3>Theo dõi chúng tôi trên</h3>
-                <ul>
-                    <li>
-                        <i class="fa-brands fa-facebook"></i>
-                        Facebook
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-instagram"></i>
-                        Instagram
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-linkedin"></i>
-                        Linkedin
-                    </li>
-                </ul>
-            </div>
-            <div id="download">
-                <h3>Tải Ứng Dụng Trên Cửa Hàng</h3>
-                <img src="./Screenshot 2025-09-18 172015.png" alt="qr code">
-                <ul>
-                    <li>
-                        <i class="fa-brands fa-app-store"></i>
-                        Appstore
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-google-play"></i>
-                        Google Play
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="madeby">
-            <h5>Made by euph0r1a</h5>
-            <p>
-                Email: tri.td.2777@aptechlearning.edu.vn
-                <br>
-                Phone: +84*********
-                <br>
-                Address: HUST/Aptech
-            </p>
-        </div>
-        <div id="copyright">
-            @2025-Bản quyền thuộc về Thái Đức Trí
-        </div>
+    <div>
+      <ul>MAKE BY THAI DUC TRI
+        <li>Email: xxxx@gmail.com</li>
+        <li>Phone: 0xxxxxxx</li>
+        <li>Address: HUST</li>
+      </ul>
     </div>
+    <div class="copy">
+      @2025 - Bản quyền thuộc về Thái Đức Trí
+    </div>
+  </footer>
 </body>
 
 </html>
