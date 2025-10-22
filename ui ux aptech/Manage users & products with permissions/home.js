@@ -2,85 +2,86 @@ const productListEl = document.getElementById("product-list");
 productListEl.innerHTML = "";
 
 const products = JSON.parse(localStorage.getItem("product")) || [];
-let count = 0;
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 products.forEach((product) => {
   const card = document.createElement("div");
   card.classList.add("card");
 
   card.innerHTML = `
-
-      <img src="${product.image}" alt="${product.name}" style="border-style:solid" />
-      <span>${product.name}</span>
-      <span>${product.price}</span>
-      <span>${product.description}</span>
-      <button class="add" id="${count}">Thêm</button>
-
-  `; //later
+    <img src="${product.image}" alt="${product.name}" style="border-style:solid" />
+    <span>${product.name}</span>
+    <span>${product.price}</span>
+    <span>${product.description}</span>
+    <button class="add" data-id="${product.id}">Thêm</button>
+  `;
 
   productListEl.appendChild(card);
-  count++;
 });
 
-const add = document.querySelectorAll(".add");
+const addButtons = document.querySelectorAll(".add");
 const tbody = document.getElementById("tbody");
-const cart = [];
-add.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const btnId = e.currentTarget.id;
 
-    const a = localStorage.getItem("product");
-    const products = JSON.parse(a);
-    const product = products.find((p) => p.id === Number(btnId));
+addButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const productId = Number(e.currentTarget.dataset.id);
+    const products = JSON.parse(localStorage.getItem("product"));
+    const product = products.find((p) => p.id === productId);
+
+    if (!product) return;
+
+    if (cart.some(item => item.id === productId)) return;
+
+    product.quantity = 1;
     cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
 
     btn.textContent = "Đã thêm vào giỏ hàng";
     btn.setAttribute("disabled", "true");
 
     const tr = document.createElement("tr");
+    tr.setAttribute("data-id", product.id);
 
-    const tdname = document.createElement("td");
-    tdname.innerHTML = `
-      <img src="${cart[btnId].image || ""}" alt="${cart[btnId].name}"><span>${
-      cart[btnId].name
-    }</span>
+    const tdName = document.createElement("td");
+    tdName.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" /><span>${product.name}</span>
     `;
 
-    const tdprice = document.createElement("td");
-    tdprice.innerHTML = `
-      <span>${cart[btnId].price}</span>
+    const tdPrice = document.createElement("td");
+    tdPrice.textContent = product.price;
+
+    const tdQuantity = document.createElement("td");
+    tdQuantity.innerHTML = `
+      <input type="number" class="quantity" min="1" value="1" style="width: 40px;" />
+      <button class="del">Bỏ</button>
     `;
 
-    const tdquantity = document.createElement("td");
-    tdquantity.innerHTML = `
-      <input type="number" class="quantity" min="1" style="width: 40px;"><button class="del">Bỏ</button>
-    `;
-    tr.appendChild(tdname);
-    tr.appendChild(tdprice);
-    tr.appendChild(tdquantity);
+    tr.appendChild(tdName);
+    tr.appendChild(tdPrice);
+    tr.appendChild(tdQuantity);
     tbody.appendChild(tr);
 
-    const quantityInput = tr.querySelector(".quantity");
-
+    const quantityInput = tdQuantity.querySelector(".quantity");
     quantityInput.addEventListener("input", (event) => {
-      const newQuantity = parseInt(event.target.value, 10);
-      if (newQuantity >= 1) {
-        cart[btnId].quantity = newQuantity;
-      }
+      const newQuantity = parseInt(event.target.value, 10) || 1;
+      const cartIndex = cart.findIndex(item => item.id === product.id);
+      cart[cartIndex].quantity = newQuantity;
+      localStorage.setItem("cart", JSON.stringify(cart));
     });
 
-    const del = document.querySelectorAll(".del");
+    const deleteBtn = tdQuantity.querySelector(".del");
+    deleteBtn.addEventListener("click", () => {
+      tr.remove();
+      cart = cart.filter(item => item.id !== product.id);
+      localStorage.setItem("cart", JSON.stringify(cart));
 
-    del.addEventListener("click", () => {
-      tbody.removeChild(tr);
-      product = product.filter((item) => item.id !== product.id);
-      localStorage.setItem("product", JSON.stringify(product));
+      btn.textContent = "Thêm";
+      btn.removeAttribute("disabled");
     });
   });
 });
 
 const logout = document.getElementById("logout");
-
 logout.addEventListener("click", () => {
   localStorage.setItem("login-status", false);
   localStorage.setItem("role", "");
