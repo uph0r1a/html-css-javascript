@@ -8,12 +8,16 @@ products.forEach((product) => {
   const card = document.createElement("div");
   card.classList.add("card");
 
+  const inCart = cart.some(item => item.id === product.id);
+
   card.innerHTML = `
     <img src="${product.image}" alt="${product.name}" style="border-style:solid" />
     <span>${product.name}</span>
-    <span>${product.price}</span>
+    <span> $${product.price}</span>
     <span>${product.description}</span>
-    <button class="add" data-id="${product.id}">Thêm</button>
+    <button class="add" data-id="${product.id}" ${inCart ? "disabled" : ""}>
+      ${inCart ? "Đã thêm vào giỏ hàng" : "Thêm"}
+    </button>
   `;
 
   productListEl.appendChild(card);
@@ -21,6 +25,15 @@ products.forEach((product) => {
 
 const addButtons = document.querySelectorAll(".add");
 const tbody = document.getElementById("tbody");
+const sumspan = document.getElementById("sum");
+
+function updateTotal() {
+  let sum = 0;
+  for (let i = 0; i < cart.length; i++) {
+    sum += Number(cart[i].quantity * cart[i].price);
+  }
+  sumspan.textContent = `$${sum.toFixed(2)}`;
+}
 
 addButtons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -29,7 +42,6 @@ addButtons.forEach((btn) => {
     const product = products.find((p) => p.id === productId);
 
     if (!product) return;
-
     if (cart.some(item => item.id === productId)) return;
 
     product.quantity = 1;
@@ -62,14 +74,19 @@ addButtons.forEach((btn) => {
     tbody.appendChild(tr);
 
     const quantityInput = tdQuantity.querySelector(".quantity");
+    const deleteBtn = tdQuantity.querySelector(".del");
+
     quantityInput.addEventListener("input", (event) => {
-      const newQuantity = parseInt(event.target.value, 10) || 1;
+      let newQuantity = parseInt(event.target.value, 10);
+      if (isNaN(newQuantity) || newQuantity < 1) newQuantity = 1;
+      event.target.value = newQuantity;
+
       const cartIndex = cart.findIndex(item => item.id === product.id);
       cart[cartIndex].quantity = newQuantity;
       localStorage.setItem("cart", JSON.stringify(cart));
+      updateTotal();
     });
 
-    const deleteBtn = tdQuantity.querySelector(".del");
     deleteBtn.addEventListener("click", () => {
       tr.remove();
       cart = cart.filter(item => item.id !== product.id);
@@ -77,7 +94,10 @@ addButtons.forEach((btn) => {
 
       btn.textContent = "Thêm";
       btn.removeAttribute("disabled");
+      updateTotal();
     });
+
+    updateTotal();
   });
 });
 
@@ -85,5 +105,8 @@ const logout = document.getElementById("logout");
 logout.addEventListener("click", () => {
   localStorage.setItem("login-status", false);
   localStorage.setItem("role", "");
+  localStorage.removeItem("cart");
   window.location.href = "login.html";
 });
+
+updateTotal();

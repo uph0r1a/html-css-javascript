@@ -101,7 +101,7 @@ formproduct.addEventListener("submit", (e) => {
   const newProduct = {
     id: countproduct,
     name: nameproductinp.value,
-    price: "$" + priceproductinp.value,
+    price: priceproductinp.value,
     description: descriptionproductinp.value,
     image: imageproductinp.value,
   };
@@ -115,7 +115,7 @@ formproduct.addEventListener("submit", (e) => {
   tdname.textContent = newProduct.name;
 
   const tdprice = document.createElement("td");
-  tdprice.textContent = newProduct.price;
+  tdprice.textContent = "$" + newProduct.price;
 
   const tddescription = document.createElement("td");
   tddescription.textContent = newProduct.description;
