@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <h1>Thêm người dùng</h1>
+        <label for="name">Họ tên</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="role">Vai trò</label>
+        <input type="text" name="role" id="role" required>
+
+        <button type="submit">Thêm</button>
+
+    </form>
+
+    <table>
+        <h1>CRUD Người dùng</h1>
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Vai trò</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <form id="formproduct">
+        <h1>Thêm sản phẩm</h1>
+        <label for="nameproduct">Tên</label>
+        <input type="text" name="nameproduct" id="nameproduct">
+
+        <label for="priceproduct">Giá</label>
+        <input type="number" name="priceproduct" id="priceproduct">
+
+        <label for="descriptionproduct">Mô tả</label>
+        <textarea name="descriptionproduct" id="descriptionproduct"></textarea>
+
+        <label for="imageproduct">Ảnh</label>
+        <input type="file" name="imageproduct" id="imageproduct" accept="image/*">
+
+        <button type="submit">Thêm</button>
+    </form>
+
+    <table>
+        <h1>CRUD Sản phẩm</h1>
+        <thead>
+            <tr>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Mô tả</th>
+                <th>Ảnh</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyproduct">
+
+        </tbody>
+    </table>
+
+    <button id="log-out">Đăng xuất</button>
+    <script src="./admin.js"></script>
+</body>
+
+</html>
