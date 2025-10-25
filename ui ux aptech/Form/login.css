@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.image {
+    flex: 1.5;
+    background: url('./image/1d364e9f2594f61c316f5253e578dadde434aa8c.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+.form-container {
+    margin: 0 150px;
+    padding: 20px 0;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0 20px;
+    color: #667085;
+}
+
+a {
+    color: #6a38d9;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+#phone {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#tel {
+    border: none;
+    width: 85%;
+}
+
+select {
+    margin-left: 10px;
+    font-size: 14px;
+    width: 8%;
+    border: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    font-size: 14px;
+}
+
+button {
+    background: #6a38d9;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #592ccc;
+}
